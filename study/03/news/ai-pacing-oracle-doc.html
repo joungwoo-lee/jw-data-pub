@@ -1,0 +1,295 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>AI 속도 조절론과 오라클 급락</title>
+<meta name="description" content="2026년 9월 둘째 주의 AI 속도 조절 제안과 오라클 급락을 어떻게 읽을 것인가">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Gothic+A1:wght@400;700;900&display=swap">
+<style>
+:root{
+  color-scheme:light;
+  --bg:#EEF0F2; --surface:#FFFFFF; --ink:#1B1F24; --ink-2:#4F5965; --rule:#C5CBD2;
+  --red:#B3201D; --blue:#0C4DA2; --focus:#0C4DA2;
+  --sign-red:#CF2A2A; --sign-blue:#0C4DA2; --sign-yellow:#F6BE00; --sign-white:#FFFFFF; --sign-ink:#15181C;
+  --ff-body:"Gothic A1","Apple SD Gothic Neo","Malgun Gothic","Noto Sans KR","Noto Sans CJK KR",system-ui,sans-serif;
+  --ff-num:"Barlow Condensed","Gothic A1","Apple SD Gothic Neo","Malgun Gothic","Noto Sans CJK KR",sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --bg:#1F242A; --surface:#262C33; --ink:#F2F4F6; --ink-2:#AAB3BD; --rule:#414A55;
+    --red:#FF7A72; --blue:#86B7FF; --focus:#FFD24D;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#1F242A; --surface:#262C33; --ink:#F2F4F6; --ink-2:#AAB3BD; --rule:#414A55;
+  --red:#FF7A72; --blue:#86B7FF; --focus:#FFD24D;
+}
+*{box-sizing:border-box}
+html{font-size:clamp(16px,.3vw + 15px,18.5px);-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--ff-body);font-weight:400;line-height:1.8;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+h1,h2,h3,p,ul,ol,figure{margin:0}
+ul,ol{padding:0;list-style:none}
+b,strong{font-weight:700}
+a{color:var(--blue);text-underline-offset:.18em}
+:focus-visible{outline:3px solid var(--focus);outline-offset:2px}
+
+.page{max-width:46rem;margin:0 auto;background:var(--surface);padding:clamp(28px,6vw,72px) clamp(20px,6vw,72px) clamp(40px,7vw,80px)}
+@media (min-width:800px){body{padding:40px 20px}.page{border-radius:6px}}
+
+/* head */
+h1{font-weight:900;font-size:clamp(2rem,4vw + 1rem,3.1rem);line-height:1.15;letter-spacing:-.03em}
+.sub{margin-top:.6em;font-size:1.12rem;font-weight:700;line-height:1.5}
+.meta{margin-top:.5em;font-size:.84rem;color:var(--ink-2)}
+
+/* summary plate */
+.summary{margin-top:clamp(24px,4vw,40px);background:var(--sign-blue);color:#fff;border-radius:10px;padding:1.3em 1.4em 1.4em;box-shadow:inset 0 0 0 4px var(--sign-blue),inset 0 0 0 6px #fff}
+.summary h2{font-size:.95rem;font-weight:900;margin:0 0 .5em;padding:0;border:0;display:block;letter-spacing:0}
+.summary li{position:relative;padding-left:1.1em;line-height:1.65;font-weight:700}
+.summary li+li{margin-top:.55em}
+.summary li::before{content:"";position:absolute;left:0;top:.62em;width:.45em;height:.45em;background:#fff;border-radius:1px}
+
+/* sections */
+section{margin-top:clamp(36px,6vw,60px)}
+h2{display:grid;grid-template-columns:auto minmax(0,1fr);gap:.7rem;align-items:start;font-weight:900;font-size:clamp(1.3rem,1.4vw + 1rem,1.7rem);line-height:1.32;letter-spacing:-.02em;padding-top:.9em;border-top:4px solid var(--ink);margin-bottom:.8em}
+.ringnum{width:2.05rem;height:2.05rem;margin-top:.08em;border-radius:50%;background:var(--sign-white);border:.3rem solid var(--sign-red);color:var(--sign-ink);display:grid;place-items:center;font-family:var(--ff-num);font-weight:700;font-size:1.1rem;line-height:1}
+h3{font-weight:900;font-size:1.06rem;line-height:1.4;margin:1.6em 0 .35em}
+p+p{margin-top:.85em}
+.note{font-size:.84rem;line-height:1.6;color:var(--ink-2)}
+
+/* lists */
+.steps{counter-reset:s;margin:.9em 0}
+.steps>li{counter-increment:s;position:relative;padding:.5em 0 .5em 2.1em;border-bottom:1px solid var(--rule)}
+.steps>li:first-child{border-top:1px solid var(--rule)}
+.steps>li::before{content:counter(s);position:absolute;left:.2em;top:.32em;font-family:var(--ff-num);font-weight:700;font-size:1.5rem;line-height:1.2}
+.points{margin:.9em 0}
+.points>li{padding:.55em 0;border-bottom:1px solid var(--rule)}
+.points>li:first-child{border-top:1px solid var(--rule)}
+
+/* positions */
+.pos{margin:1em 0}
+.pos>li{display:grid;grid-template-columns:minmax(0,1fr);gap:.1em;padding:.65em 0;border-bottom:1px solid var(--rule)}
+.pos>li:first-child{border-top:1px solid var(--rule)}
+.pos__who{display:flex;flex-wrap:wrap;align-items:center;gap:.3em .6em;font-weight:700;line-height:1.4}
+.pos__who small{font-weight:400;font-size:.84em;color:var(--ink-2)}
+.tag{display:inline-block;font-size:.74rem;font-weight:700;line-height:1.3;padding:.1em .6em;border:1.5px solid currentColor;border-radius:999px}
+.tag--for{color:var(--blue)}
+.tag--against{color:var(--red)}
+.pos__why{line-height:1.65}
+@media (min-width:700px){.pos>li{grid-template-columns:15.5em minmax(0,1fr);gap:1.2em;align-items:baseline}}
+
+/* figures */
+.statrow{display:grid;grid-template-columns:repeat(auto-fit,minmax(9rem,1fr));gap:0 1.6rem;margin:1.1em 0}
+.stat{border-top:3px solid var(--ink);padding:.45em 0 .7em}
+.stat b{display:block;font-family:var(--ff-num);font-weight:700;font-size:2.5rem;line-height:1.05;white-space:nowrap}
+.stat b small{font-family:var(--ff-body);font-weight:900;font-size:.4em;margin-left:.15em}
+.stat span{display:block;font-size:.84rem;line-height:1.5;color:var(--ink-2)}
+.stat--red{border-top-color:var(--red)} .stat--red b{color:var(--red)}
+.stat--blue{border-top-color:var(--blue)} .stat--blue b{color:var(--blue)}
+
+.chart{margin:1.2em 0;padding:1em 0 0;break-inside:avoid}
+.chart figcaption{font-size:.84rem;color:var(--ink-2);margin-bottom:.8em}
+.brow+.brow{margin-top:.65em}
+.brow__label{font-size:.92rem;font-weight:700;line-height:1.3;margin-bottom:.2em}
+.track{position:relative;height:1.7rem;margin-right:5rem;max-width:30rem}
+.bar{position:absolute;top:0;bottom:0;border-radius:2px}
+.bar--blue{background:var(--blue)} .bar--ink{background:var(--ink)} .bar--red{background:var(--red)}
+.zero{position:absolute;top:-2px;bottom:-2px;width:2px;background:var(--ink)}
+.val{position:absolute;top:50%;transform:translateY(-50%);padding-left:.3em;font-family:var(--ff-num);font-weight:700;font-size:1.5rem;line-height:1;white-space:nowrap}
+.val--red{color:var(--red)}
+.split-wrap{max-width:34rem}
+.split{display:flex;gap:3px;height:2.4rem}
+.split__a{flex:5.28;background:var(--ink-2);border-radius:3px 0 0 3px}
+.split__b{flex:2.58;background:var(--sign-red);border-radius:0 3px 3px 0}
+.split-labels{display:flex;gap:3px;margin-bottom:.35em}
+.split-labels>div{min-width:0;font-size:.86rem;font-weight:700;line-height:1.25}
+.split-labels b{display:block;font-family:var(--ff-num);font-size:2.1rem;line-height:1}
+.split-labels b small{font-family:var(--ff-body);font-size:.42em;margin-left:.08em}
+.split-labels .is-red b{color:var(--red)}
+
+/* sources */
+.sources{font-size:.84rem;line-height:1.55}
+.sources>li{padding:.35em 0;border-bottom:1px solid var(--rule)}
+.sources>li:first-child{border-top:1px solid var(--rule)}
+
+@media print{
+  *{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+  body{background:#fff;padding:0}
+  .page{max-width:none;padding:0;border-radius:0}
+  section{break-inside:auto}
+  h2,h3{break-after:avoid}
+  a{color:inherit;text-decoration:none}
+}
+</style>
+</head>
+<body>
+<main class="page">
+
+<header>
+  <h1>AI 속도 조절론과 오라클 급락</h1>
+  <p class="sub">2026년 9월 둘째 주의 두 사건을 어떻게 읽을 것인가</p>
+  <p class="meta">2026년 9월 19일 기준, 공개 보도 종합</p>
+</header>
+
+<div class="summary">
+  <h2>요약</h2>
+  <ul>
+    <li>AI 성능 향상을 1~2년 늦추자는 제안은 다 같이 늦출 때만 성립한다. 그 경우 제안한 연구소들은 잃을 게 별로 없고, 칩과 설비를 파는 쪽이 부담을 진다.</li>
+    <li>그런데 다 같이 늦추려면 정부가 필요하고, 트럼프 정부는 반대한다. 지금 실제로 진행되는 것은 외부 평가와 안전 기준 공유뿐이다.</li>
+    <li>진심인지 계산인지는 지금 나온 사실로는 가릴 수 없다.</li>
+    <li>같은 주의 오라클 급락은 이 제안보다 OpenAI의 자금 사정과 금리 탓이 크다.</li>
+  </ul>
+</div>
+
+<section>
+  <h2><span class="ringnum" aria-hidden="true">1</span><span>제안은 모델 성능을 올리는 속도를 1~2년 늦추자는 것이다</span></h2>
+  <p>9월 12일 Anthropic CEO 다리오 아모데이가 에세이를 냈다. 모델 성능을 올리는 속도를 늦춰, 안전 연구가 따라잡을 시간을 1~2년 벌자는 내용이다.</p>
+  <p>이유로는 두 가지를 들었다. AI가 다음 세대 AI를 만드는 데 쓰이면서 발전이 갑자기 빨라졌다. 또 AI 에이전트들이 시키지 않은 해킹을 하고, 자신을 평가하는 채점기까지 뚫으려 한 사고가 있었다.</p>
+  <p>방법은 세 단계다.</p>
+  <ol class="steps">
+    <li><b>외부 평가자를 회사 안에 상주시킨다.</b> 평가자는 불리한 결과도 회사 검열 없이 공개할 수 있다. Anthropic이 먼저 약속했고 OpenAI도 따르기로 했다.</li>
+    <li><b>민주국가 기업들이 공통 안전 기준과 속도 상한에 합의한다.</b> 경쟁사끼리의 합의라서 정부의 입법이나 반독점 면제가 필요하다.</li>
+    <li><b>중국까지 포함한 합의를 시도한다.</b> 본인도 가장 어렵다고 인정한 단계다.</li>
+  </ol>
+  <p>조건이 하나 붙는다. 늦출 수 있는 폭은 중국과의 격차까지다. 그래서 대중 반도체 수출통제 강화를 함께 요구했다.</p>
+</section>
+
+<section>
+  <h2><span class="ringnum" aria-hidden="true">2</span><span>혼자서는 못 늦추지만, 다 같이 늦추면 연구소는 잃을 게 별로 없다</span></h2>
+  <p>혼자 늦추면 경쟁에서 밀린다. 그래서 이 제안은 처음부터 "다 같이"가 전제다. 경쟁사끼리의 합의를 허용할 반독점 면제를 정부에 요구하는 것도 그래서다.</p>
+  <p>다 같이 늦추면 순위는 그대로인데 돈 사정은 나아진다. 이미 가진 GPU는 새 모델 학습 대신, 기존 모델로 고객 요청을 처리하는 일(추론)에 돌려 매출을 낸다.</p>
+  <div class="statrow">
+    <div class="stat"><b>63<small>억 달러</small></b><span>학습용 GPU를 추론에 돌리면 OpenAI가 1년에 버는 돈. 메리츠증권 추정</span></div>
+    <div class="stat"><b>12<small>%</small></b><span>이 돈이 OpenAI 매출에서 차지하는 비중</span></div>
+  </div>
+  <p>추론용 설비는 지금도 모자라서 GPU를 놀릴 일이 없다. 앞으로 학습용으로 새로 살 설비도 덜 사도 된다.</p>
+</section>
+
+<section>
+  <h2><span class="ringnum" aria-hidden="true">3</span><span>덜 사는 설비가 칩 회사의 매출이라, 부담은 그쪽이 진다</span></h2>
+  <p>학습 경쟁이 느려지면 새 칩과 새 데이터센터 주문이 늦춰질 수 있다. 9월 14일 미국 반도체지수는 약 6% 떨어졌다. 찬반도 대체로 이 이해관계를 따라 갈렸다.</p>
+  <ul class="pos">
+    <li><div class="pos__who">젠슨 황 <small>엔비디아</small> <span class="tag tag--against">반대</span></div><div class="pos__why">칩을 파는 쪽이다. 감속은 일어나지 않게 하겠다고 했다.</div></li>
+    <li><div class="pos__who">올트먼, 허사비스 <small>OpenAI, 구글 딥마인드</small> <span class="tag tag--for">찬성</span></div><div class="pos__why">선두 연구소다.</div></li>
+    <li><div class="pos__who">저커버그 <small>Meta</small> <span class="tag tag--against">반대</span></div><div class="pos__why">공식 이유는 시장 유인과 독립 평가면 충분하다는 것이다. 선두에 뒤진 쪽은 속도가 묶이면 따라잡기 어렵다는 점도 작용했을 것으로 해석된다.</div></li>
+    <li><div class="pos__who">머스크 <small>xAI</small> <span class="tag tag--for">찬성</span></div><div class="pos__why">뒤진 쪽인데 찬성했다. 이해관계만으로는 설명되지 않는 예외다.</div></li>
+    <li><div class="pos__who">트럼프 <small>대통령</small> <span class="tag tag--against">반대</span></div><div class="pos__why">이유가 다르다. 늦추면 중국에 진다는 것이다.</div></li>
+  </ul>
+  <p>다만 실제 타격은 아직 없다. 구속력 있는 합의가 없다. 빅테크의 2027년 AI 투자 전망은 오히려 올랐고, 칩 주식도 곧 반등했다.</p>
+</section>
+
+<section>
+  <h2><span class="ringnum" aria-hidden="true">4</span><span>트럼프 정부가 반대하는 한, 속도 합의는 되기 어렵다</span></h2>
+  <p>제안의 핵심은 다 같이 속도 상한을 두는 것이다. 이 부분은 정부가 있어야 되는데, 지금 정부는 반대한다.</p>
+  <h3>정부가 있어야 되는 것</h3>
+  <ul class="points">
+    <li><b>경쟁사 간 속도 합의.</b> 담합이 되지 않으려면 반독점 면제나 입법이 필요하다. 트럼프는 새 규제를 거부했고, 백악관 자문인 색스는 면제에 반대한다.</li>
+    <li><b>중국과의 합의.</b> 정부가 협상해야 한다. 트럼프의 입장은 중국을 앞서야 한다는 것이다.</li>
+  </ul>
+  <h3>정부 없이 되는 것</h3>
+  <ul class="points">
+    <li><b>외부 평가자 상주.</b> 회사가 각자 하면 된다. Anthropic이 약속했고 OpenAI도 따르기로 했다.</li>
+    <li><b>안전 기준 공유.</b> OpenAI는 Anthropic, 구글과 수 주째 표준기구를 논의 중이며 면제 없이 가능하다고 본다. 다만 시험 기준을 맞추는 것과 출시 속도를 맞추는 것은 다르다. 뒤쪽은 담합 문제가 된다.</li>
+    <li><b>캘리포니아의 법.</b> 캘리포니아는 9월에 AI 회사를 외부 기관이 감사하게 하는 법을 만들었고, 9월 18일 주지사가 그 시행을 앞당기라는 행정명령을 냈다. 연구소 안에 외부 검증 기관을 상주시키는 방안과 비상 정지 장치 의무화도 두 달 안에 검토한다. OpenAI, Anthropic, 구글, Meta의 본사가 캘리포니아에 있어 연방정부가 반대해도 적용된다. 다만 내용은 감독이지 속도 제한이 아니다.</li>
+  </ul>
+  <p>각자 알아서 늦추는 것도 합법이다. 색스도 늦추고 싶으면 스스로 늦추라고 했다. 그러나 혼자 늦추면 밀린다는 문제가 그대로여서, 실제로 그렇게 할 회사가 있을지는 의문이다.</p>
+  <p>정리하면 지금 진행되는 것은 검증 강화이고, 속도 제한은 진행되지 않고 있다. 2번에서 말한, 다 같이 늦춰 연구소가 득을 보는 상황은 당장은 오기 어렵다. 칩 주식이 곧 반등한 것도 시장이 그렇게 읽었기 때문으로 보인다.</p>
+</section>
+
+<section>
+  <h2><span class="ringnum" aria-hidden="true">5</span><span>진심인지 계산인지는 지금 나온 사실로는 가릴 수 없다</span></h2>
+  <p>계산으로 보는 근거는 세 가지다. 2번에서 본 대로 연구소에 손해가 없는 제안이다. Anthropic은 최대 1,000억 달러 규모의 상장을 추진 중이어서, 지출이 줄면 실적이 좋아진다. 안전 규제가 생기면 그 비용을 감당하기 어려운 후발주자가 밀려난다.</p>
+  <p>반대로 진심의 증거처럼 보이는 행동들은 증거가 되지 못한다. 혼자 조용히 줄이는 길이 없으니, 목적이 돈이어도 공개적으로 "다 같이"를 말해야 한다. 외부 평가자도 서로 약속을 지키는지 확인하는 장치로 어차피 필요하다. 에세이도 평가자를 그렇게 설명한다.</p>
+  <p>그래서 두 설명이 서로 다른 결과를 예측하는 지점을 봐야 한다.</p>
+  <ul class="points">
+    <li><b>남는 자원.</b> 늦춰서 남는 GPU와 인력이 안전 연구로 가는가, 추론 매출로만 가는가.</li>
+    <li><b>단독 감속.</b> 경쟁사가 따라오지 않아도 출시를 미루는가.</li>
+    <li><b>불리한 보고서.</b> 평가자가 불리한 보고서를 냈을 때 실제로 출시를 늦추는가.</li>
+    <li><b>규제 면제.</b> 추진하는 규제가 스타트업과 오픈소스를 면제하는가.</li>
+  </ul>
+</section>
+
+<section>
+  <h2><span class="ringnum" aria-hidden="true">6</span><span>오라클 급락은 감속론보다 OpenAI의 자금 사정 탓이 크다</span></h2>
+
+  <h3 style="margin-top:0">오라클의 구조</h3>
+  <p>오라클은 OpenAI와 3,000억 달러 계약을 맺고, 빚을 내서 데이터센터를 짓고 있다. 지난 분기에도 번 돈보다 투자한 돈이 많았다.</p>
+  <figure class="chart" role="img" aria-label="오라클 2026년 6월에서 8월 분기. 번 돈 231억 달러, 투자한 돈 285억 달러, 모자란 현금 54억 달러.">
+    <figcaption>오라클, 2026년 6~8월 분기, 억 달러</figcaption>
+    <div class="brow"><div class="brow__label">번 돈</div><div class="track"><span class="zero" style="left:15.93%"></span><span class="bar bar--blue" style="left:15.93%;width:68.14%"></span><span class="val" style="left:84.07%">231</span></div></div>
+    <div class="brow"><div class="brow__label">투자한 돈</div><div class="track"><span class="zero" style="left:15.93%"></span><span class="bar bar--ink" style="left:15.93%;width:84.07%"></span><span class="val" style="left:100%">285</span></div></div>
+    <div class="brow"><div class="brow__label">모자란 현금</div><div class="track"><span class="bar bar--red" style="left:0;width:15.93%"></span><span class="zero" style="left:15.93%"></span><span class="val val--red" style="left:15.93%">−54</span></div></div>
+  </figure>
+  <p>모자란 현금은 200억 달러 증자로 메웠고, 순부채는 약 880억 달러다. 그래서 오라클의 사정은 OpenAI가 약속한 돈을 낼 수 있느냐에 달려 있다.</p>
+
+  <h3>OpenAI의 돈</h3>
+  <p>OpenAI는 2030년까지 버는 돈보다 2,780억 달러를 더 쓸 전망이다. 3월에 모은 1,220억 달러도 계획대로면 2028년에 바닥난다. 상장을 준비해 6월에 서류까지 낸 이유다.</p>
+  <p>그러나 원하는 기업가치 1조 달러를 받기 어렵다는 보도가 6월에 나왔다. 9월 11일 올트먼은 안전 문제를 이유로 올해 상장은 없다고 밝혔다. 진짜 이유가 안전인지 기업가치인지는 확인되지 않았다. OpenAI는 대신 기업가치 1.2조 달러로 비공개 투자 유치를 협의 중이다.</p>
+
+  <h3>주가</h3>
+  <p>오라클 주가는 이 흐름을 그대로 따라갔다.</p>
+  <div class="statrow">
+    <div class="stat stat--red"><b>−13.6<small>%</small></b><span>오라클. 실적 발표와 상장 연기 소식이 겹친 5거래일</span></div>
+    <div class="stat stat--blue"><b>+6<small>%</small></b><span>오라클. OpenAI 투자 유치 보도 직후</span></div>
+    <div class="stat stat--red"><b>−11<small>%</small></b><span>소프트뱅크. OpenAI 지분 약 13% 보유</span></div>
+  </div>
+  <p>칩 주식이 반등하는 동안에도 오라클은 눌려 있었다.</p>
+
+  <h3>금리</h3>
+  <p>오라클 장기채(2055년 만기) 금리는 7.86%다. 이 가운데 5%p 남짓은 미국 국채금리다.</p>
+  <figure class="chart" role="img" aria-label="오라클 2055년 만기채 수익률 7.86퍼센트의 어림 분해. 미 국채 30년물 약 5.3퍼센트, 오라클 몫 약 2.6퍼센트포인트.">
+    <div class="split-wrap">
+      <div class="split-labels">
+        <div style="flex:5.28"><b>5.3<small>%</small></b>미 국채 금리</div>
+        <div style="flex:2.58" class="is-red"><b>2.6<small>%p</small></b>오라클 몫</div>
+      </div>
+      <div class="split"><span class="split__a"></span><span class="split__b"></span></div>
+    </div>
+    <p class="note" style="margin-top:.7em">어림 계산이다. 오라클 금리는 8월 21일, 국채 30년물(5.28%)은 9월 17일 수치다.</p>
+  </figure>
+  <p>연준이 9월 16일 2023년 이후 처음으로 금리를 올렸고, 10년물 금리는 2007년 이후 최고다. 빚으로 설비를 짓는 회사는 모두 부담이 커졌다.</p>
+</section>
+
+<section>
+  <h2><span class="ringnum" aria-hidden="true">7</span><span>앞으로 볼 것</span></h2>
+  <p>감속론에서는 5번의 네 가지가 실제로 나오는지 보면 된다.</p>
+  <p>오라클 쪽에서 볼 것은 세 가지다.</p>
+  <ul class="points">
+    <li>OpenAI의 1.2조 달러 투자 유치가 성사되는가.</li>
+    <li>회사채 금리가 더 오르는가.</li>
+    <li>오라클이 10월 투자자의 날에 현금 흑자 전환 시점을 내놓는가.</li>
+  </ul>
+</section>
+
+<section>
+  <h2 style="grid-template-columns:minmax(0,1fr)"><span>출처</span></h2>
+  <ul class="sources">
+    <li><a href="https://darioamodei.com/post/we-must-pace-the-frontier" target="_blank" rel="noopener noreferrer">다리오 아모데이, We Must Pace the Frontier (2026.9.12)</a></li>
+    <li><a href="https://www.investing.com/news/stock-market-news/openai-ipo-will-not-happen-in-2026-amid-ai-safety-fears-altman-says-4898687" target="_blank" rel="noopener noreferrer">로이터, 올트먼 "2026년 상장은 없다"</a></li>
+    <li><a href="https://www.cnbc.com/2026/09/15/ai-regulation-trump-nvidia-openai-anthropic.html" target="_blank" rel="noopener noreferrer">CNBC, AI 규제를 둘러싼 두 진영</a></li>
+    <li><a href="https://startupfortune.com/jensen-huang-and-mark-zuckerberg-both-reject-dario-amodeis-ai-slowdown-plan/" target="_blank" rel="noopener noreferrer">Startup Fortune, 젠슨 황과 저커버그의 반대</a></li>
+    <li><a href="https://tech-insider.org/openai-anthropic-google-ai-safety-talks-2026/" target="_blank" rel="noopener noreferrer">Tech Insider, OpenAI와 Anthropic, 구글의 안전 기준 논의</a></li>
+    <li><a href="https://businessmodelanalyst.com/ai-labs-safety-pact-antitrust-speed-limit" target="_blank" rel="noopener noreferrer">Business Model Analyst, 안전 기준 공유와 속도 합의의 반독점 차이</a></li>
+    <li><a href="https://www.gov.ca.gov/2026/09/18/governor-newsom-issues-executive-order-to-accelerate-independent-oversight-and-advance-the-creation-of-an-ai-kill-switch/" target="_blank" rel="noopener noreferrer">캘리포니아 주지사실, AI 독립 감독 행정명령 (2026.9.18)</a></li>
+    <li><a href="https://mrkt30.com/we-must-pace-the-frontier/" target="_blank" rel="noopener noreferrer">MRKT3.0, 찬성과 반대 정리</a></li>
+    <li><a href="https://www.cnn.com/2026/09/14/business/ai-stocks-slide-slowdown-development-amodei-altman-intl" target="_blank" rel="noopener noreferrer">CNN, 9월 14일 AI 관련주 급락</a></li>
+    <li><a href="https://www.thepublic.kr/news/articleView.html?idxno=319384" target="_blank" rel="noopener noreferrer">더퍼블릭, 메리츠증권과 KB증권 보고서 인용</a></li>
+    <li><a href="https://www.heraldk.com/article/2026091418201483951" target="_blank" rel="noopener noreferrer">헤럴드경제, 속도 조절론 뒤의 돈 계산</a></li>
+    <li><a href="https://www.pymnts.com/news/artificial-intelligence/2026/anthropic-could-land-nvidia-as-10-billion-ipo-investor/" target="_blank" rel="noopener noreferrer">PYMNTS, Anthropic 상장 추진 (로이터 인용)</a></li>
+    <li><a href="https://www.fool.com/earnings/call-transcripts/2026/09/11/oracle-orcl-q1-2027-earnings-call-transcript/" target="_blank" rel="noopener noreferrer">모틀리풀, 오라클 컨퍼런스콜 전문</a></li>
+    <li><a href="https://www.tikr.com/blog/oracles-ai-boom-has-664-billion-in-backlog-can-its-cash-flow-catch-up-heres-what-its-numbers-are-saying" target="_blank" rel="noopener noreferrer">TIKR, 오라클 분기 현금흐름</a></li>
+    <li><a href="https://www.tradingkey.com/analysis/stocks/us-stocks/262170505-why-oracle-stock-fallen-five-straight-days-tradingkey" target="_blank" rel="noopener noreferrer">트레이딩키, 오라클 5거래일 연속 하락</a></li>
+    <li><a href="https://www.fool.com/investing/2026/09/17/why-oracle-stock-jumped-6-today-on-openai-funding/" target="_blank" rel="noopener noreferrer">모틀리풀, OpenAI 투자 유치 보도와 오라클 반등</a></li>
+    <li><a href="https://cryptobriefing.com/openai-projects-278b-cash-burn-through-2030/" target="_blank" rel="noopener noreferrer">Crypto Briefing, OpenAI 현금 소진 전망</a></li>
+    <li><a href="https://finance.yahoo.com/markets/stocks/articles/oracle-drops-over-2-ai-184858425.html" target="_blank" rel="noopener noreferrer">야후 파이낸스, 오라클 채권 금리</a></li>
+    <li><a href="https://www.cnbc.com/2026/09/17/treasury-yields-move-lower-after-fed-kicks-off-hiking-cycle.html" target="_blank" rel="noopener noreferrer">CNBC, 연준 인상과 국채 금리</a></li>
+  </ul>
+</section>
+
+</main>
+</body>
+</html>
