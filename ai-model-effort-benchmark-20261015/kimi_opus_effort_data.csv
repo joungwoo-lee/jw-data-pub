@@ -1,5 +1,5 @@
 Model,Effort,Cost USD/task,Intelligence Index,Output k,Reasoning k
-Kimi K3,Low,,34,,
+Kimi K3,Low,1.15,30,12,6
 Kimi K3,Max,2.00,44,48,32
 Opus 5,Low,1.10,39,15,7
 Opus 5,Medium,2.19,45,29,15
