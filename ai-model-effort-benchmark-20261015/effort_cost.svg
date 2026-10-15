@@ -1,122 +1,110 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1360" height="1050" viewBox="0 0 1360 1050">
+<svg xmlns="http://www.w3.org/2000/svg" width="1500" height="1050" viewBox="0 0 1500 1050">
 <rect width="100%" height="100%" fill="white"/>
 <style>
 text{font-family:Arial,sans-serif;fill:#263445}
-.small{font-size:12px}
-.axis{font-size:18px}
-.tick{font-size:15px}
-.boxTitle{font-size:32px;font-weight:700}
-.effort{font-size:24px;font-weight:700}
-.value{font-size:22px}
+.title{font-size:27px;font-weight:700}
+.axis{font-size:17px}.tick{font-size:14px}.small{font-size:11px}
+.boxTitle{font-size:20px;font-weight:700}
+.boxHead{font-size:11px;font-weight:700;fill:#657384}
+.boxRow{font-size:14px}
 </style>
-<text x="80" y="42" font-size="30" font-weight="700">Cost vs Performance</text>
-<line x1="80" y1="950.0" x2="860" y2="950.0" stroke="#e8edf2"/>
-<text x="68" y="955.0" text-anchor="end" class="tick">24</text>
-<line x1="80" y1="842.5" x2="860" y2="842.5" stroke="#e8edf2"/>
-<text x="68" y="847.5" text-anchor="end" class="tick">29</text>
-<line x1="80" y1="735.0" x2="860" y2="735.0" stroke="#e8edf2"/>
-<text x="68" y="740.0" text-anchor="end" class="tick">34</text>
-<line x1="80" y1="627.5" x2="860" y2="627.5" stroke="#e8edf2"/>
-<text x="68" y="632.5" text-anchor="end" class="tick">39</text>
-<line x1="80" y1="520.0" x2="860" y2="520.0" stroke="#e8edf2"/>
-<text x="68" y="525.0" text-anchor="end" class="tick">44</text>
-<line x1="80" y1="412.5" x2="860" y2="412.5" stroke="#e8edf2"/>
-<text x="68" y="417.5" text-anchor="end" class="tick">49</text>
-<line x1="80" y1="305.0" x2="860" y2="305.0" stroke="#e8edf2"/>
-<text x="68" y="310.0" text-anchor="end" class="tick">54</text>
-<line x1="80" y1="197.5" x2="860" y2="197.5" stroke="#e8edf2"/>
-<text x="68" y="202.5" text-anchor="end" class="tick">59</text>
-<line x1="80" y1="90.0" x2="860" y2="90.0" stroke="#e8edf2"/>
-<text x="68" y="95.0" text-anchor="end" class="tick">64</text>
-<line x1="80.0" y1="950" x2="80.0" y2="956" stroke="#9aa8b5"/>
-<text x="80.0" y="975" text-anchor="middle" class="tick">0</text>
-<line x1="191.4" y1="950" x2="191.4" y2="956" stroke="#9aa8b5"/>
-<text x="191.4" y="975" text-anchor="middle" class="tick">1</text>
-<line x1="302.9" y1="950" x2="302.9" y2="956" stroke="#9aa8b5"/>
-<text x="302.9" y="975" text-anchor="middle" class="tick">2</text>
-<line x1="414.3" y1="950" x2="414.3" y2="956" stroke="#9aa8b5"/>
-<text x="414.3" y="975" text-anchor="middle" class="tick">3</text>
-<line x1="525.7" y1="950" x2="525.7" y2="956" stroke="#9aa8b5"/>
-<text x="525.7" y="975" text-anchor="middle" class="tick">4</text>
-<line x1="637.1" y1="950" x2="637.1" y2="956" stroke="#9aa8b5"/>
-<text x="637.1" y="975" text-anchor="middle" class="tick">5</text>
-<line x1="748.6" y1="950" x2="748.6" y2="956" stroke="#9aa8b5"/>
-<text x="748.6" y="975" text-anchor="middle" class="tick">6</text>
-<line x1="860.0" y1="950" x2="860.0" y2="956" stroke="#9aa8b5"/>
-<text x="860.0" y="975" text-anchor="middle" class="tick">7</text>
-<line x1="80" y1="950" x2="860" y2="950" stroke="#b9c3cc"/>
-<polyline points="208.1,821.0 302.9,520.0" fill="none" stroke="#1f77b4" stroke-width="4"/>
-<circle cx="208.1" cy="821.0" r="7" fill="#1f77b4" stroke="white" stroke-width="2"/>
-<circle cx="302.9" cy="520.0" r="7" fill="#1f77b4" stroke="white" stroke-width="2"/>
-<polyline points="174.7,735.0 304.0,498.5" fill="none" stroke="#9467bd" stroke-width="4"/>
-<circle cx="174.7" cy="735.0" r="7" fill="#9467bd" stroke="white" stroke-width="2"/>
-<circle cx="304.0" cy="498.5" r="7" fill="#9467bd" stroke="white" stroke-width="2"/>
-<polyline points="202.6,627.5 324.0,498.5 482.3,434.0 623.8,391.0 733.0,369.5" fill="none" stroke="#ff7f0e" stroke-width="4"/>
-<circle cx="202.6" cy="627.5" r="7" fill="#ff7f0e" stroke="white" stroke-width="2"/>
-<circle cx="324.0" cy="498.5" r="7" fill="#ff7f0e" stroke="white" stroke-width="2"/>
-<circle cx="482.3" cy="434.0" r="7" fill="#ff7f0e" stroke="white" stroke-width="2"/>
-<circle cx="623.8" cy="391.0" r="7" fill="#ff7f0e" stroke="white" stroke-width="2"/>
-<circle cx="733.0" cy="369.5" r="7" fill="#ff7f0e" stroke="white" stroke-width="2"/>
-<polyline points="141.3,563.0 229.3,369.5 282.8,305.0 465.5,262.0 746.3,219.0" fill="none" stroke="#2ca02c" stroke-width="4"/>
-<circle cx="141.3" cy="563.0" r="7" fill="#2ca02c" stroke="white" stroke-width="2"/>
-<circle cx="229.3" cy="369.5" r="7" fill="#2ca02c" stroke="white" stroke-width="2"/>
-<circle cx="282.8" cy="305.0" r="7" fill="#2ca02c" stroke="white" stroke-width="2"/>
-<circle cx="465.5" cy="262.0" r="7" fill="#2ca02c" stroke="white" stroke-width="2"/>
-<circle cx="746.3" cy="219.0" r="7" fill="#2ca02c" stroke="white" stroke-width="2"/>
-<polyline points="279.5,778.0 399.8,735.0 647.2,649.0" fill="none" stroke="#d62728" stroke-width="4"/>
-<circle cx="279.5" cy="778.0" r="7" fill="#d62728" stroke="white" stroke-width="2"/>
-<circle cx="399.8" cy="735.0" r="7" fill="#d62728" stroke="white" stroke-width="2"/>
-<circle cx="647.2" cy="649.0" r="7" fill="#d62728" stroke="white" stroke-width="2"/>
-<polyline points="746.3,219.0 880,219.0 900,245.0" fill="none" stroke="#2ca02c" stroke-width="1.8" stroke-dasharray="6 6"/>
-<rect x="900" y="70" width="220" height="350" rx="10" fill="white" stroke="#2ca02c" stroke-width="2"/>
-<text x="1010" y="108" text-anchor="middle" class="boxTitle">Opus 5.5</text>
-<text x="910" y="148" class="effort">Low · $0.55 · 42pt</text>
-<text x="910" y="175" class="value">out 10k · reason 3k</text>
-<text x="910" y="206" class="effort">Medium · $1.34 · 51pt</text>
-<text x="910" y="233" class="value">out 26k · reason 12k</text>
-<text x="910" y="264" class="effort">High · $1.82 · 54pt</text>
-<text x="910" y="291" class="value">out 36k · reason 18k</text>
-<text x="910" y="322" class="effort">XHigh · $3.46 · 56pt</text>
-<text x="910" y="349" class="value">out 66k · reason 40k</text>
-<text x="910" y="380" class="effort">Max · $5.98 · 58pt</text>
-<text x="910" y="407" class="value">out 119k · reason 84k</text>
-<polyline points="733.0,369.5 880,369.5 1130,245.0" fill="none" stroke="#ff7f0e" stroke-width="1.8" stroke-dasharray="6 6"/>
-<rect x="1130" y="70" width="220" height="350" rx="10" fill="white" stroke="#ff7f0e" stroke-width="2"/>
-<text x="1240" y="108" text-anchor="middle" class="boxTitle">Opus 5</text>
-<text x="1140" y="148" class="effort">Low · $1.10 · 39pt</text>
-<text x="1140" y="175" class="value">out 15k · reason 7k</text>
-<text x="1140" y="206" class="effort">Medium · $2.19 · 45pt</text>
-<text x="1140" y="233" class="value">out 29k · reason 15k</text>
-<text x="1140" y="264" class="effort">High · $3.61 · 48pt</text>
-<text x="1140" y="291" class="value">out 46k · reason 25k</text>
-<text x="1140" y="322" class="effort">XHigh · $4.88 · 50pt</text>
-<text x="1140" y="349" class="value">out 61k · reason 35k</text>
-<text x="1140" y="380" class="effort">Max · $5.86 · 51pt</text>
-<text x="1140" y="407" class="value">out 73k · reason 43k</text>
-<polyline points="304.0,498.5 880,498.5 900,540.0" fill="none" stroke="#9467bd" stroke-width="1.8" stroke-dasharray="6 6"/>
-<rect x="900" y="455" width="220" height="170" rx="10" fill="white" stroke="#9467bd" stroke-width="2"/>
-<text x="1010" y="493" text-anchor="middle" class="boxTitle">GLM-5.3</text>
-<text x="910" y="533" class="effort">Low · $0.85 · 34pt</text>
-<text x="910" y="560" class="value">out 30k · reason 21k</text>
-<text x="910" y="591" class="effort">Max · $2.01 · 45pt</text>
-<text x="910" y="618" class="value">out 71k · reason 49k</text>
-<polyline points="302.9,520.0 880,520.0 1130,540.0" fill="none" stroke="#1f77b4" stroke-width="1.8" stroke-dasharray="6 6"/>
-<rect x="1130" y="455" width="220" height="170" rx="10" fill="white" stroke="#1f77b4" stroke-width="2"/>
-<text x="1240" y="493" text-anchor="middle" class="boxTitle">Kimi K3</text>
-<text x="1140" y="533" class="effort">Low · $1.15 · 30pt</text>
-<text x="1140" y="560" class="value">out 12k · reason 6k</text>
-<text x="1140" y="591" class="effort">Max · $2.00 · 44pt</text>
-<text x="1140" y="618" class="value">out 48k · reason 32k</text>
-<polyline points="647.2,649.0 880,649.0 900,765.0" fill="none" stroke="#d62728" stroke-width="1.8" stroke-dasharray="6 6"/>
-<rect x="900" y="650" width="220" height="230" rx="10" fill="white" stroke="#d62728" stroke-width="2"/>
-<text x="1010" y="688" text-anchor="middle" class="boxTitle">Sonnet 5</text>
-<text x="910" y="728" class="effort">High · $1.79 · 32pt</text>
-<text x="910" y="755" class="value">out 44k · reason 28k</text>
-<text x="910" y="786" class="effort">XHigh · $2.87 · 34pt</text>
-<text x="910" y="813" class="value">out 65k · reason 44k</text>
-<text x="910" y="844" class="effort">Max · $5.09 · 38pt</text>
-<text x="910" y="871" class="value">out 118k · reason 88k</text>
-<text x="470" y="1015" text-anchor="middle" class="axis">Cost per benchmark task (USD) — lower is better</text>
+<text x="85" y="42" class="title">Cost vs Performance</text>
+<line x1="85" y1="950.0" x2="1160" y2="950.0" stroke="#e8edf2"/>
+<text x="73" y="955.0" text-anchor="end" class="tick">24</text>
+<line x1="85" y1="842.5" x2="1160" y2="842.5" stroke="#e8edf2"/>
+<text x="73" y="847.5" text-anchor="end" class="tick">29</text>
+<line x1="85" y1="735.0" x2="1160" y2="735.0" stroke="#e8edf2"/>
+<text x="73" y="740.0" text-anchor="end" class="tick">34</text>
+<line x1="85" y1="627.5" x2="1160" y2="627.5" stroke="#e8edf2"/>
+<text x="73" y="632.5" text-anchor="end" class="tick">39</text>
+<line x1="85" y1="520.0" x2="1160" y2="520.0" stroke="#e8edf2"/>
+<text x="73" y="525.0" text-anchor="end" class="tick">44</text>
+<line x1="85" y1="412.5" x2="1160" y2="412.5" stroke="#e8edf2"/>
+<text x="73" y="417.5" text-anchor="end" class="tick">49</text>
+<line x1="85" y1="305.0" x2="1160" y2="305.0" stroke="#e8edf2"/>
+<text x="73" y="310.0" text-anchor="end" class="tick">54</text>
+<line x1="85" y1="197.5" x2="1160" y2="197.5" stroke="#e8edf2"/>
+<text x="73" y="202.5" text-anchor="end" class="tick">59</text>
+<line x1="85" y1="90.0" x2="1160" y2="90.0" stroke="#e8edf2"/>
+<text x="73" y="95.0" text-anchor="end" class="tick">64</text>
+<line x1="85.0" y1="950" x2="85.0" y2="956" stroke="#9aa8b5"/>
+<text x="85.0" y="974" text-anchor="middle" class="tick">0</text>
+<line x1="238.6" y1="950" x2="238.6" y2="956" stroke="#9aa8b5"/>
+<text x="238.6" y="974" text-anchor="middle" class="tick">1</text>
+<line x1="392.1" y1="950" x2="392.1" y2="956" stroke="#9aa8b5"/>
+<text x="392.1" y="974" text-anchor="middle" class="tick">2</text>
+<line x1="545.7" y1="950" x2="545.7" y2="956" stroke="#9aa8b5"/>
+<text x="545.7" y="974" text-anchor="middle" class="tick">3</text>
+<line x1="699.3" y1="950" x2="699.3" y2="956" stroke="#9aa8b5"/>
+<text x="699.3" y="974" text-anchor="middle" class="tick">4</text>
+<line x1="852.9" y1="950" x2="852.9" y2="956" stroke="#9aa8b5"/>
+<text x="852.9" y="974" text-anchor="middle" class="tick">5</text>
+<line x1="1006.4" y1="950" x2="1006.4" y2="956" stroke="#9aa8b5"/>
+<text x="1006.4" y="974" text-anchor="middle" class="tick">6</text>
+<line x1="1160.0" y1="950" x2="1160.0" y2="956" stroke="#9aa8b5"/>
+<text x="1160.0" y="974" text-anchor="middle" class="tick">7</text>
+<line x1="85" y1="950" x2="1160" y2="950" stroke="#b9c3cc"/>
+<line x1="1190" y1="90" x2="1190" y2="950" stroke="#e0e5ea"/>
+<polyline points="261.6,821.0 392.1,520.0" fill="none" stroke="#1f77b4" stroke-width="3"/>
+<circle cx="261.6" cy="821.0" r="6.5" fill="#1f77b4" stroke="white" stroke-width="2"/>
+<circle cx="392.1" cy="520.0" r="6.5" fill="#1f77b4" stroke="white" stroke-width="2"/>
+<polyline points="215.5,735.0 393.7,498.5" fill="none" stroke="#9467bd" stroke-width="3"/>
+<circle cx="215.5" cy="735.0" r="6.5" fill="#9467bd" stroke="white" stroke-width="2"/>
+<circle cx="393.7" cy="498.5" r="6.5" fill="#9467bd" stroke="white" stroke-width="2"/>
+<polyline points="253.9,627.5 421.3,498.5 639.4,434.0 834.4,391.0 984.9,369.5" fill="none" stroke="#ff7f0e" stroke-width="3"/>
+<circle cx="253.9" cy="627.5" r="6.5" fill="#ff7f0e" stroke="white" stroke-width="2"/>
+<circle cx="421.3" cy="498.5" r="6.5" fill="#ff7f0e" stroke="white" stroke-width="2"/>
+<circle cx="639.4" cy="434.0" r="6.5" fill="#ff7f0e" stroke="white" stroke-width="2"/>
+<circle cx="834.4" cy="391.0" r="6.5" fill="#ff7f0e" stroke="white" stroke-width="2"/>
+<circle cx="984.9" cy="369.5" r="6.5" fill="#ff7f0e" stroke="white" stroke-width="2"/>
+<polyline points="169.5,563.0 290.8,369.5 364.5,305.0 616.4,262.0 1003.4,219.0" fill="none" stroke="#2ca02c" stroke-width="3"/>
+<circle cx="169.5" cy="563.0" r="6.5" fill="#2ca02c" stroke="white" stroke-width="2"/>
+<circle cx="290.8" cy="369.5" r="6.5" fill="#2ca02c" stroke="white" stroke-width="2"/>
+<circle cx="364.5" cy="305.0" r="6.5" fill="#2ca02c" stroke="white" stroke-width="2"/>
+<circle cx="616.4" cy="262.0" r="6.5" fill="#2ca02c" stroke="white" stroke-width="2"/>
+<circle cx="1003.4" cy="219.0" r="6.5" fill="#2ca02c" stroke="white" stroke-width="2"/>
+<polyline points="359.9,778.0 525.8,735.0 866.7,649.0" fill="none" stroke="#d62728" stroke-width="3"/>
+<circle cx="359.9" cy="778.0" r="6.5" fill="#d62728" stroke="white" stroke-width="2"/>
+<circle cx="525.8" cy="735.0" r="6.5" fill="#d62728" stroke="white" stroke-width="2"/>
+<circle cx="866.7" cy="649.0" r="6.5" fill="#d62728" stroke="white" stroke-width="2"/>
+<polyline points="1003.4,219.0 1200,219.0 1230,175.0" fill="none" stroke="#2ca02c" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1230" y="95" width="240" height="160" rx="8" fill="white" stroke="#2ca02c" stroke-width="1.6"/>
+<text x="1350" y="120" text-anchor="middle" class="boxTitle">Opus 5.5</text>
+<text x="1240" y="140" class="boxHead">Effort      $      Score   Out   Reason</text>
+<text x="1240" y="162" class="boxRow" style="font-family:Consolas,Menlo,monospace">Low    $0.55   42      10k     3k</text>
+<text x="1240" y="180" class="boxRow" style="font-family:Consolas,Menlo,monospace">Med    $1.34   51      26k    12k</text>
+<text x="1240" y="198" class="boxRow" style="font-family:Consolas,Menlo,monospace">High   $1.82   54      36k    18k</text>
+<text x="1240" y="216" class="boxRow" style="font-family:Consolas,Menlo,monospace">XHi    $3.46   56      66k    40k</text>
+<text x="1240" y="234" class="boxRow" style="font-family:Consolas,Menlo,monospace">Max    $5.98   58     119k    84k</text>
+<polyline points="984.9,369.5 1200,369.5 1230,355.0" fill="none" stroke="#ff7f0e" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1230" y="275" width="240" height="160" rx="8" fill="white" stroke="#ff7f0e" stroke-width="1.6"/>
+<text x="1350" y="300" text-anchor="middle" class="boxTitle">Opus 5</text>
+<text x="1240" y="320" class="boxHead">Effort      $      Score   Out   Reason</text>
+<text x="1240" y="342" class="boxRow" style="font-family:Consolas,Menlo,monospace">Low    $1.10   39      15k     7k</text>
+<text x="1240" y="360" class="boxRow" style="font-family:Consolas,Menlo,monospace">Med    $2.19   45      29k    15k</text>
+<text x="1240" y="378" class="boxRow" style="font-family:Consolas,Menlo,monospace">High   $3.61   48      46k    25k</text>
+<text x="1240" y="396" class="boxRow" style="font-family:Consolas,Menlo,monospace">XHi    $4.88   50      61k    35k</text>
+<text x="1240" y="414" class="boxRow" style="font-family:Consolas,Menlo,monospace">Max    $5.86   51      73k    43k</text>
+<polyline points="393.7,498.5 1200,498.5 1230,505.0" fill="none" stroke="#9467bd" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1230" y="455" width="240" height="100" rx="8" fill="white" stroke="#9467bd" stroke-width="1.6"/>
+<text x="1350" y="480" text-anchor="middle" class="boxTitle">GLM-5.3</text>
+<text x="1240" y="500" class="boxHead">Effort      $      Score   Out   Reason</text>
+<text x="1240" y="522" class="boxRow" style="font-family:Consolas,Menlo,monospace">Low    $0.85   34      30k    21k</text>
+<text x="1240" y="540" class="boxRow" style="font-family:Consolas,Menlo,monospace">Max    $2.01   45      71k    49k</text>
+<polyline points="392.1,520.0 1200,520.0 1230,625.0" fill="none" stroke="#1f77b4" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1230" y="575" width="240" height="100" rx="8" fill="white" stroke="#1f77b4" stroke-width="1.6"/>
+<text x="1350" y="600" text-anchor="middle" class="boxTitle">Kimi K3</text>
+<text x="1240" y="620" class="boxHead">Effort      $      Score   Out   Reason</text>
+<text x="1240" y="642" class="boxRow" style="font-family:Consolas,Menlo,monospace">Low    $1.15   30      12k     6k</text>
+<text x="1240" y="660" class="boxRow" style="font-family:Consolas,Menlo,monospace">Max    $2.00   44      48k    32k</text>
+<polyline points="866.7,649.0 1200,649.0 1230,755.0" fill="none" stroke="#d62728" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1230" y="695" width="240" height="120" rx="8" fill="white" stroke="#d62728" stroke-width="1.6"/>
+<text x="1350" y="720" text-anchor="middle" class="boxTitle">Sonnet 5</text>
+<text x="1240" y="740" class="boxHead">Effort      $      Score   Out   Reason</text>
+<text x="1240" y="762" class="boxRow" style="font-family:Consolas,Menlo,monospace">High   $1.79   32      44k    28k</text>
+<text x="1240" y="780" class="boxRow" style="font-family:Consolas,Menlo,monospace">XHi    $2.87   34      65k    44k</text>
+<text x="1240" y="798" class="boxRow" style="font-family:Consolas,Menlo,monospace">Max    $5.09   38     118k    88k</text>
+<text x="622.5" y="1015" text-anchor="middle" class="axis">Cost per benchmark task (USD) — lower is better</text>
 <text transform="translate(24 520) rotate(-90)" text-anchor="middle" class="axis">Artificial Analysis Intelligence Index v4.3.2 — higher is better</text>
-<text x="80" y="1040" class="small">Source: Artificial Analysis</text>
+<text x="85" y="1040" class="small">Source: Artificial Analysis</text>
 </svg>
