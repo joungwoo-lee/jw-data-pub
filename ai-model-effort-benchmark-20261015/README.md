@@ -32,21 +32,3 @@
 ![Output Token 양 대비 성능](effort_tokens_clean.svg)
 
 **참고:** Opus 5.5는 이전 Opus 5보다 토큰 가격이 싸졌기 때문에, 달러 비용이 아니라 사용한 토큰양을 가로축으로 놓으면 같은 비용 그래프에서 볼 때보다 토큰 사용량이 상대적으로 더 크게 보인다.
-
-## 다른 벤치마크: Coding Agent Index v1.5
-
-기존 **Intelligence Index**와 별도로, 코딩 에이전트 성능을 비교한다. 모델뿐 아니라 **에이전트 실행 환경(harness)** 도 결과에 영향을 준다. Opus 5·5.5는 Claude Code, GLM-5.3은 OpenCode, Kimi K3는 Kimi Code CLI에서 평가되었다.
-
-### 가로축: 작업당 API 비용
-
-![Coding Agent Index — 비용 대비 성능](coding_agent_index_v15_cost_performance.svg)
-
-### 가로축: 작업당 총토큰
-
-![Coding Agent Index — 총토큰 대비 성능](coding_agent_index_v15_total_tokens_performance.svg)
-
-**주의:** 여기의 총토큰은 입력·캐시·출력 토큰을 포함하며, 앞의 Intelligence Index 그래프에서 사용한 **출력 토큰**과 다르다. 공개된 이 비교에서는 Opus 5와 5.5는 Max 설정이지만, Kimi K3와 GLM-5.3의 Effort는 별도로 표기되지 않는다. 없는 Effort별 수치를 추정해 넣지 않았다.
-
-- [데이터 CSV](coding_agent_index_v15_four_models.csv)
-- [Artificial Analysis — Claude Code vs OpenCode](https://artificialanalysis.ai/agents/coding-agents/comparisons/claude-code-vs-opencode)
-- [Artificial Analysis — Claude Code vs Kimi Code CLI](https://artificialanalysis.ai/agents/coding-agents/comparisons/claude-code-vs-kimi-code-cli)
