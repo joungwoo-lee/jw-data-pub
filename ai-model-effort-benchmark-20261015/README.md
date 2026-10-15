@@ -1,6 +1,6 @@
-# Kimi K3 · GLM-5.3 · Claude Opus 5 · Opus 5.5: Effort별 성능·비용 비교
+# Kimi K3 · GLM-5.3 · Claude Opus 5 · Opus 5.5 · Sonnet 5: Effort별 성능·비용 비교
 
-![성능·비용 산점도](effort_cost_glm53_no_overlap_v2.png)
+![성능·비용 산점도](effort_cost_clean.svg)
 
 ## 그래프 출처 / 기준
 
@@ -29,7 +29,7 @@
 
 ## 가로축을 토큰양으로 할 경우
 
-![Output Token 양 대비 성능](effort_tokens_glm53_no_overlap_v2.png)
+![Output Token 양 대비 성능](effort_tokens_clean.svg)
 
 **참고:** Opus 5.5는 이전 Opus 5보다 토큰 가격이 싸졌기 때문에, 달러 비용이 아니라 사용한 토큰양을 가로축으로 놓으면 같은 비용 그래프에서 볼 때보다 토큰 사용량이 상대적으로 더 크게 보인다.
 
