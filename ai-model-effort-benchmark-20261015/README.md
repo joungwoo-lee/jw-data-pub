@@ -1,6 +1,6 @@
 # Kimi K3 · Claude Opus 5 · Opus 5.5: Effort별 성능·비용 비교
 
-![성능·비용 산점도](kimi_opus_effort_cost_performance_verified.png)
+![성능·비용 산점도](kimi_opus_effort_cost_performance_dotted_labels.png)
 
 ## 그래프 출처 / 기준
 
