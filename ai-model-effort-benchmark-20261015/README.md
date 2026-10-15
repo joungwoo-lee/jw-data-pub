@@ -25,3 +25,9 @@
 - [Artificial Analysis Intelligence Index](https://artificialanalysis.ai/evaluations/artificial-analysis-intelligence-index)
 - [Artificial Analysis 평가 방법론](https://artificialanalysis.ai/methodology/intelligence-benchmarking)
 - [OpenRouter Kimi K3 공급자·가격](https://openrouter.ai/moonshotai/kimi-k3)
+
+## 가로축을 토큰양으로 할 경우
+
+![Output Token 양 대비 성능](kimi_opus_effort_output_tokens_vs_performance.png)
+
+**참고:** Opus 5.5는 이전 Opus 5보다 토큰 가격이 싸졌기 때문에, 달러 비용이 아니라 사용한 토큰양을 가로축으로 놓으면 같은 비용 그래프에서 볼 때보다 토큰 사용량이 상대적으로 더 크게 보인다.
