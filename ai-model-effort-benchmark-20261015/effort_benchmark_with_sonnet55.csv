@@ -1,0 +1,20 @@
+Model,Effort,Cost USD/task,Intelligence Index,Output k,Reasoning k
+Kimi K3,Low,1.15,30,12,6
+Kimi K3,Max,2.00,44,48,32
+GLM-5.3,Low,0.85,34,30,21
+GLM-5.3,Max,2.01,45,71,49
+Opus 5,Low,1.10,39,15,7
+Opus 5,Medium,2.19,45,29,15
+Opus 5,High,3.61,48,46,25
+Opus 5,XHigh,4.88,50,61,35
+Opus 5,Max,5.86,51,73,43
+Opus 5.5,Low,0.55,42,10,3
+Opus 5.5,Medium,1.34,51,26,12
+Opus 5.5,High,1.82,54,36,18
+Opus 5.5,XHigh,3.46,56,66,40
+Opus 5.5,Max,5.98,58,119,84
+Sonnet 5.5,Low,0.35,36,14,5
+Sonnet 5.5,Medium,0.48,41,21,8
+Sonnet 5.5,High,0.88,47,37,19
+Sonnet 5.5,XHigh,2.01,52,75,48
+Sonnet 5.5,Max,5.46,56,197,147
