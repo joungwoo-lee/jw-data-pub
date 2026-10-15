@@ -1,6 +1,8 @@
 # Kimi K3 · Claude Opus 5 · Opus 5.5: Effort별 성능·비용 비교
 
-![성능·비용 산점도](kimi_opus_effort_cost_performance_dotted_labels.png)
+![기존 성능·비용 산점도 — 아래 정정사항 확인 필요](kimi_opus_effort_cost_performance_dotted_labels.png)
+
+> **원본 대조 후 정정:** 위 PNG는 사용자 업로드 원본을 보존한 상태이며, **Kimi K3 Low 및 Opus 5 Low의 점수는 현재 공식 원본과 일치하지 않습니다.** 정정값은 아래 및 CSV를 기준으로 확인하세요.
 
 ## 그래프 출처 / 기준
 
@@ -20,9 +22,26 @@
 - [Artificial Analysis Kimi K3 Low/Max 비교](https://artificialanalysis.ai/models/comparisons/kimi-k3-low-vs-kimi-k3): Low **$1.15**, Max **$2.00** 작업당 비용을 제시한다.
 - [OpenRouter Kimi K3](https://openrouter.ai/moonshotai/kimi-k3): 특정 공급자 기준 입력 **$1.70**, 출력 **$8.50**, 캐시 읽기 **$0.17**이 표시된 사례는 Moonshot 공식 단가 대비 **43.3% 저렴**하다. 이는 모든 공급자에 대한 일률적 할인이나 실제 청구액 보장이 아니다.
 
-## 검증상 주의
+## 원본 데이터 일대일 검증 (2026-10-15)
 
-이 저장소의 그래프 및 CSV에 적힌 **개별 Effort별 점수·비용·토큰 수치는 이전 대화에서 작성된 값**이다. 이번 작업에서 Artificial Analysis 공식 방법론과 지표 정의는 확인했지만 **각 데이터 행을 원본 표와 일대일 재검증하지 못했다.** 따라서 이를 독립 검증 완료된 원시 측정값으로 인용하지 말 것.
+12개 행의 Intelligence Index·작업당 비용·작업당 출력 토큰·추론 토큰을 Artificial Analysis 모델 비교표와 대조했다. **10개 행은 기존 값과 일치했고, 2개 행은 정정했다.**
+
+| 모델 / Effort | 검증 결과 | 원본 근거 |
+|---|---|---|
+| Kimi K3 Low | **정정:** 점수 30 → **34 (추정치)**. 현재 작업당 비용·출력/추론 토큰은 **N/A**. 기존 $1.15·12k·6k는 현재 공식 표에서 확인 불가 | [모델 페이지](https://artificialanalysis.ai/models/kimi-k3-low) |
+| Kimi K3 Max | **일치:** 44 / $2.00 / 48k / 32k | [비교](https://artificialanalysis.ai/models/comparisons/kimi-k3-vs-claude-opus-5) |
+| Opus 5 Low | **정정:** 점수 40 → **39**. $1.10 / 15k / 7k는 일치 | [비교](https://artificialanalysis.ai/models/comparisons/claude-opus-5-5-low-vs-claude-opus-5-low) |
+| Opus 5 Medium | **일치:** 45 / $2.19 / 29k / 15k | [비교](https://artificialanalysis.ai/models/comparisons/claude-opus-5-vs-claude-opus-5-medium) |
+| Opus 5 High | **일치:** 48 / $3.61 / 46k / 25k | [비교](https://artificialanalysis.ai/models/comparisons/step-5-vs-claude-opus-5-high) |
+| Opus 5 XHigh | **일치:** 50 / $4.88 / 61k / 35k | [비교](https://artificialanalysis.ai/models/comparisons/claude-opus-5-vs-claude-opus-5-xhigh) |
+| Opus 5 Max | **일치:** 51 / $5.86 / 73k / 43k | [비교](https://artificialanalysis.ai/models/comparisons/kimi-k3-vs-claude-opus-5) |
+| Opus 5.5 Low | **일치:** 42 / $0.55 / 10k / 3k | [릴리스 비교](https://artificialanalysis.ai/models/releases/comparisons/claude-opus-5-5-vs-kimi-k3) |
+| Opus 5.5 Medium | **일치:** 51 / $1.34 / 26k / 12k | [릴리스 비교](https://artificialanalysis.ai/models/releases/comparisons/claude-opus-5-5-vs-kimi-k3) |
+| Opus 5.5 High | **일치:** 54 / $1.82 / 36k / 18k | [릴리스 비교](https://artificialanalysis.ai/models/releases/comparisons/claude-opus-5-5-vs-kimi-k3) |
+| Opus 5.5 XHigh | **일치:** 56 / $3.46 / 66k / 40k | [릴리스 비교](https://artificialanalysis.ai/models/releases/comparisons/claude-opus-5-5-vs-kimi-k3) |
+| Opus 5.5 Max | **일치:** 58 / $5.98 / 119k / 84k | [릴리스 비교](https://artificialanalysis.ai/models/releases/comparisons/claude-opus-5-5-vs-kimi-k3) |
+
+**표기:** 점수 / 작업당 비용(USD) / 작업당 출력 토큰 / 작업당 추론 토큰. Kimi Low의 34점은 원본에서 독립 평가 예정인 추정치로 표시한다. 현재 수치와 2026-10-15 당시 수치가 달랐을 가능성이 있으나, 당시 원본 스냅샷은 확보되지 않았다.
 
 ## 원본
 
