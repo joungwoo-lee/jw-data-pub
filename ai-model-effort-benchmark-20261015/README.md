@@ -7,6 +7,7 @@
 - **출처:** [Artificial Analysis](https://artificialanalysis.ai/)
 - **성능:** Artificial Analysis Intelligence Index v4.3.2
 - **벤치마크:** AI 에이전트(30%)·코딩(20%)·과학적 추론(20%)·일반 지능(30%)의 **10개 평가** 종합.
+- kimi는 하네스를 kimi code cli를 사용하였다. 하네스를 claude로 통일하고 effort별로 바꿔가며 실험한 결과는 찾지 못하였다. kimi 자체 조사에 의하면 claude 하네스를 쓸 시 성능이 1.1% 올라간다.
 - **비용:** 동일 벤치마크 작업당 가중평균 비용(USD).
 - **토큰:** 벤치마크 작업당 출력 토큰과 그중 추론 토큰. 추론 토큰을 출력 토큰에 다시 더하지 않음.
 - **Effort:** 공개된 Low / Medium / High / XHigh / Max 등 모델별 추론 강도. 같은 이름이라도 모델 간 계산량이 동일하다는 뜻은 아님.
