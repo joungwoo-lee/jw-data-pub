@@ -1,6 +1,6 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="1800" height="1050" viewBox="0 0 1800 1050">
 <rect width="100%" height="100%" fill="white"/>
-<style>text{font-family:Arial,sans-serif;fill:#263445}.small{font-size:11px}.axis{font-size:16px}.boxTitle{font-size:14px;font-weight:bold}.boxLine{font-size:10.5px}.tick{font-size:12px}</style>
+<style>text{font-family:Arial,sans-serif;fill:#263445}.small{font-size:11px}.axis{font-size:16px}.boxTitle{font-size:28px;font-weight:bold}.boxLine{font-size:21px}.tick{font-size:12px}</style>
 <text x="115" y="42" font-size="25" font-weight="bold">Cost vs Performance</text>
 <line x1="115" y1="950.0" x2="1325" y2="950.0" stroke="#e8edf2"/>
 <text x="101" y="955.0" text-anchor="end" font-size="13">24</text>
@@ -60,39 +60,66 @@
 <circle cx="424.4" cy="778.0" r="6.5" fill="#d62728" stroke="white" stroke-width="2"/>
 <circle cx="611.1" cy="735.0" r="6.5" fill="#d62728" stroke="white" stroke-width="2"/>
 <circle cx="994.8" cy="649.0" r="6.5" fill="#d62728" stroke="white" stroke-width="2"/>
-<polyline points="1148.7,219.0 1360,219.0 1425,181.0" fill="none" stroke="#2ca02c" stroke-width="1.5" stroke-dasharray="5 5"/>
-<rect x="1425" y="110" width="315" height="142" rx="8" fill="white" stroke="#2ca02c" stroke-width="1.5"/>
-<text x="1582.5" y="133" text-anchor="middle" class="boxTitle">Opus 5.5</text>
-<text x="1437" y="158" class="boxLine">Low  $0.55 · 42pt · out 10k · r 3k</text>
-<text x="1437" y="176" class="boxLine">Medium  $1.34 · 51pt · out 26k · r 12k</text>
-<text x="1437" y="194" class="boxLine">High  $1.82 · 54pt · out 36k · r 18k</text>
-<text x="1437" y="212" class="boxLine">XHigh  $3.46 · 56pt · out 66k · r 40k</text>
-<text x="1437" y="230" class="boxLine">Max  $5.98 · 58pt · out 119k · r 84k</text>
-<polyline points="1127.9,369.5 1360,369.5 1425,341.0" fill="none" stroke="#ff7f0e" stroke-width="1.5" stroke-dasharray="5 5"/>
-<rect x="1425" y="270" width="315" height="142" rx="8" fill="white" stroke="#ff7f0e" stroke-width="1.5"/>
-<text x="1582.5" y="293" text-anchor="middle" class="boxTitle">Opus 5</text>
-<text x="1437" y="318" class="boxLine">Low  $1.10 · 39pt · out 15k · r 7k</text>
-<text x="1437" y="336" class="boxLine">Medium  $2.19 · 45pt · out 29k · r 15k</text>
-<text x="1437" y="354" class="boxLine">High  $3.61 · 48pt · out 46k · r 25k</text>
-<text x="1437" y="372" class="boxLine">XHigh  $4.88 · 50pt · out 61k · r 35k</text>
-<text x="1437" y="390" class="boxLine">Max  $5.86 · 51pt · out 73k · r 43k</text>
-<polyline points="462.4,498.5 1360,498.5 1455,476.0" fill="none" stroke="#9467bd" stroke-width="1.5" stroke-dasharray="5 5"/>
-<rect x="1455" y="430" width="285" height="92" rx="8" fill="white" stroke="#9467bd" stroke-width="1.5"/>
-<text x="1597.5" y="453" text-anchor="middle" class="boxTitle">GLM-5.3</text>
-<text x="1467" y="478" class="boxLine">Low  $0.85 · 34pt · out 30k · r 21k</text>
-<text x="1467" y="496" class="boxLine">Max  $2.01 · 45pt · out 71k · r 49k</text>
-<polyline points="460.7,520.0 1360,520.0 1455,586.0" fill="none" stroke="#1f77b4" stroke-width="1.5" stroke-dasharray="5 5"/>
-<rect x="1455" y="540" width="285" height="92" rx="8" fill="white" stroke="#1f77b4" stroke-width="1.5"/>
-<text x="1597.5" y="563" text-anchor="middle" class="boxTitle">Kimi K3</text>
-<text x="1467" y="588" class="boxLine">Low  $1.15 · 30pt · out 12k · r 6k</text>
-<text x="1467" y="606" class="boxLine">Max  $2.00 · 44pt · out 48k · r 32k</text>
-<polyline points="994.8,649.0 1360,649.0 1440,705.0" fill="none" stroke="#d62728" stroke-width="1.5" stroke-dasharray="5 5"/>
-<rect x="1440" y="650" width="300" height="110" rx="8" fill="white" stroke="#d62728" stroke-width="1.5"/>
-<text x="1590" y="673" text-anchor="middle" class="boxTitle">Sonnet 5</text>
-<text x="1452" y="698" class="boxLine">High  $1.79 · 32pt · out 44k · r 28k</text>
-<text x="1452" y="716" class="boxLine">XHigh  $2.87 · 34pt · out 65k · r 44k</text>
-<text x="1452" y="734" class="boxLine">Max  $5.09 · 38pt · out 118k · r 88k</text>
+<!-- Compact labels: 30% narrower than prior boxes, 2x text size -->
+<!-- Opus 5.5: 315 -> 220 -->
+<polyline points="1148.7,219.0 1328,219.0 1345,220.0" fill="none" stroke="#2ca02c" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1345" y="80" width="220" height="280" rx="8" fill="white" stroke="#2ca02c" stroke-width="1.5"/>
+<text x="1455" y="113" text-anchor="middle" class="boxTitle">Opus 5.5</text>
+<text x="1355" y="144" class="boxLine">Low · $0.55</text>
+<text x="1355" y="166" class="boxLine">42pt · o10k · r3k</text>
+<text x="1355" y="188" class="boxLine">Medium · $1.34</text>
+<text x="1355" y="210" class="boxLine">51pt · o26k · r12k</text>
+<text x="1355" y="232" class="boxLine">High · $1.82</text>
+<text x="1355" y="254" class="boxLine">54pt · o36k · r18k</text>
+<text x="1355" y="276" class="boxLine">XHigh · $3.46</text>
+<text x="1355" y="298" class="boxLine">56pt · o66k · r40k</text>
+<text x="1355" y="320" class="boxLine">Max · $5.98</text>
+<text x="1355" y="342" class="boxLine">58pt · o119k · r84k</text>
+
+<!-- Opus 5: 315 -> 220; routed above label area to avoid crossing Opus 5.5 box -->
+<polyline points="1127.9,369.5 1328,369.5 1328,62 1575,62 1575,80" fill="none" stroke="#ff7f0e" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1575" y="80" width="220" height="280" rx="8" fill="white" stroke="#ff7f0e" stroke-width="1.5"/>
+<text x="1685" y="113" text-anchor="middle" class="boxTitle">Opus 5</text>
+<text x="1585" y="144" class="boxLine">Low · $1.10</text>
+<text x="1585" y="166" class="boxLine">39pt · o15k · r7k</text>
+<text x="1585" y="188" class="boxLine">Medium · $2.19</text>
+<text x="1585" y="210" class="boxLine">45pt · o29k · r15k</text>
+<text x="1585" y="232" class="boxLine">High · $3.61</text>
+<text x="1585" y="254" class="boxLine">48pt · o46k · r25k</text>
+<text x="1585" y="276" class="boxLine">XHigh · $4.88</text>
+<text x="1585" y="298" class="boxLine">50pt · o61k · r35k</text>
+<text x="1585" y="320" class="boxLine">Max · $5.86</text>
+<text x="1585" y="342" class="boxLine">51pt · o73k · r43k</text>
+
+<!-- GLM-5.3: 285 -> 200 -->
+<polyline points="462.4,498.5 1328,498.5 1345,460" fill="none" stroke="#9467bd" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1345" y="390" width="200" height="140" rx="8" fill="white" stroke="#9467bd" stroke-width="1.5"/>
+<text x="1445" y="423" text-anchor="middle" class="boxTitle">GLM-5.3</text>
+<text x="1355" y="454" class="boxLine">Low · $0.85</text>
+<text x="1355" y="476" class="boxLine">34pt · o30k · r21k</text>
+<text x="1355" y="498" class="boxLine">Max · $2.01</text>
+<text x="1355" y="520" class="boxLine">45pt · o71k · r49k</text>
+
+<!-- Kimi K3: 285 -> 200; routed through gap between rows -->
+<polyline points="460.7,520.0 1328,520.0 1328,374 1575,374 1575,390" fill="none" stroke="#1f77b4" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1575" y="390" width="200" height="140" rx="8" fill="white" stroke="#1f77b4" stroke-width="1.5"/>
+<text x="1675" y="423" text-anchor="middle" class="boxTitle">Kimi K3</text>
+<text x="1585" y="454" class="boxLine">Low · $1.15</text>
+<text x="1585" y="476" class="boxLine">30pt · o12k · r6k</text>
+<text x="1585" y="498" class="boxLine">Max · $2.00</text>
+<text x="1585" y="520" class="boxLine">44pt · o48k · r32k</text>
+
+<!-- Sonnet 5: 300 -> 210 -->
+<polyline points="994.8,649.0 1328,649.0 1345,645" fill="none" stroke="#d62728" stroke-width="1.5" stroke-dasharray="5 5"/>
+<rect x="1345" y="550" width="210" height="190" rx="8" fill="white" stroke="#d62728" stroke-width="1.5"/>
+<text x="1450" y="583" text-anchor="middle" class="boxTitle">Sonnet 5</text>
+<text x="1355" y="614" class="boxLine">High · $1.79</text>
+<text x="1355" y="636" class="boxLine">32pt · o44k · r28k</text>
+<text x="1355" y="658" class="boxLine">XHigh · $2.87</text>
+<text x="1355" y="680" class="boxLine">34pt · o65k · r44k</text>
+<text x="1355" y="702" class="boxLine">Max · $5.09</text>
+<text x="1355" y="724" class="boxLine">38pt · o118k · r88k</text>
 <text x="720" y="1015" text-anchor="middle" class="axis">Cost per benchmark task (USD) — lower is better</text>
 <text transform="translate(28 520) rotate(-90)" text-anchor="middle" class="axis">Artificial Analysis Intelligence Index v4.3.2 — higher is better</text>
-<text x="115" y="1040" class="small">Source: Artificial Analysis · Compact right-side boxes summarize all effort levels and connect from each model’s highest-effort point.</text>
+<text x="115" y="1040" class="small">Source: Artificial Analysis · o = output tokens, r = reasoning tokens.</text>
 </svg>
