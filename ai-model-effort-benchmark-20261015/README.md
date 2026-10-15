@@ -1,6 +1,6 @@
 # Kimi K3 · GLM-5.3 · Claude Opus 5 · Opus 5.5 · Sonnet 5: Effort별 성능·비용 비교
 
-![성능·비용 산점도](effort_cost_clean.svg)
+![성능·비용 산점도](effort_cost_right_labels.svg)
 
 ## 그래프 출처 / 기준
 
